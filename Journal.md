@@ -51,3 +51,37 @@ None
 
 **Blockers or open questions:**
 - Nothing at the moment
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Week 9 — Solution building & PR submission
+
+### Check-in 1 (mid-week)
+
+**Current progress:**
+Implemented the fix from PLAN.md (Option A): extended the README fixture in `test_readme_with_all_quality_signals` from ~51 words to >500 words so it is legitimately categorized `comprehensive`, keeping all quality signals (installation, usage, badges, demo, tech stack) intact. Scorer logic left unchanged. All 23 tests in `test_readme_scorer.py` pass. Committed on `test/156-readme_scorer_test_fixture_too_short` and reworded to follow Conventional Commits (`test(agent): ...`).
+
+**Next steps:**
+Push the branch, open the PR against `ascherj/pathreview`, and request peer review. Decide whether the PLAN.md / Journal.md / screenshot artifacts stay in the PR.
+
+**Blockers:**
+None. (Because the `gh` CLI isn't installed, so opening the PR was via the GitHub web UI instead.)
+
+---
+
+### Check-in 2 (end of week)
+
+**PR link:** https://github.com/ascherj/pathreview/pull/679
+
+**Branch:** `test/156-readme_scorer_test_fixture_too_short`
+
+**What you built:**
+Extended the unit-test README fixture so its word count exceeds the scorer's 500-word `comprehensive` threshold, resolving the failing assertion without changing scorer behavior. The bug was in the test fixture, not the scoring logic.
+
+**Tests added or updated:**
+Updated `tests/unit/test_readme_scorer.py` — the fixture in `test_readme_with_all_quality_signals`. It covers a full-signal README returning a high `comprehensive` score. All 23 tests in the file pass.
+
+**Self-review confirmation:** [x] make check passes  [x] make test-unit passes
+> Interpreted per course guidance: the change introduces **no new failures**. Both commands have pre-existing repo-wide failures (364 ruff errors; 53 unit failures) unrelated to this issue — identical before and after my change. `test_readme_scorer.py` itself passes ruff cleanly and all its tests pass.
+
+**Draft PR feedback received from:** none
