@@ -85,3 +85,37 @@ Updated `tests/unit/test_readme_scorer.py` — the fixture in `test_readme_with_
 > Interpreted per course guidance: the change introduces **no new failures**. Both commands have pre-existing repo-wide failures (364 ruff errors; 53 unit failures) unrelated to this issue — identical before and after my change. `test_readme_scorer.py` itself passes ruff cleanly and all its tests pass.
 
 **Draft PR feedback received from:** none
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Week 10 — Iteration & reflection
+
+### Reviewer feedback
+
+**Feedback received:** [ ] Yes  [x] No — still awaiting review
+
+**Summary of feedback:**
+No review on my PR as of yet
+
+**How you responded:**
+
+---
+
+### Reflection
+
+**What was harder than you expected?**
+- Firstly, I wanted to run the test_readme_scorer function in the unit folder but I couldn't because pytest was failing so I asked Copilot to run it for me instead and it found the issue, I needed to install structlog, so I did and I was able to run it. So getting the tests to run was harder than I thought.
+
+**What did you learn about working in a large codebase?**
+- Something I learnt from this project specifically is to record error counts before and after implementing a fix so that I can see that the fix was helpful, rather than just hoping it was.
+
+**How did AI tools help — and where did they fall short?**
+- AI assistance was most useful when I was running the tests. As I said previous;y, I couldn't get the pytest to run so I had to consult AI, more specifically Copilot, which helped me. I think AI fell short in explaining the issue of what went wrong in why I couldn't run the tests, which in all really isn't its fault.
+
+**What would you do differently if you started over?**
+- I would forst capture baseline test/lint failure counts at the start of an issue so "no new failures" is a measured claim.
+
+- Install `gh` so PR work stays in the terminal instead of the web UI.
+
+**What are you most proud of from this module?**
+- That I finished. Prior to this I didn't know what a PR was or how to open one or even got an inkling of working in a large codebase but I would say that I really think I have at the very least a decent understanding of what is expected of me and that I can explain my issue and steps I took to implement the solution.
